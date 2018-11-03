@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3 on Edu Gonzalo Almorox</title>
+    <link>/publication_types/3/</link>
+    <description>Recent content in 3 on Edu Gonzalo Almorox</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Edu Gonzalo Almorox  - 2018</copyright>
+    <lastBuildDate>Thu, 01 Nov 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/publication_types/3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Local budgets and quality in care homes: a duration analysis</title>
+      <link>/publication/duration/</link>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/duration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The effect of care home closures on the quality of care homes nearby</title>
+      <link>/publication/closures/</link>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/closures/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The effects of house prices in long term care markets: Evidence from England</title>
+      <link>/publication/houseprices/</link>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/houseprices/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The role of queuing models in economic evaluation: lessons from an illustrative case study”</title>
+      <link>/publication/queues/</link>
+      <pubDate>Thu, 01 Oct 2015 00:00:00 +0100</pubDate>
+      
+      <guid>/publication/queues/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

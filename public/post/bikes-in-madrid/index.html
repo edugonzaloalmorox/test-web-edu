@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 2.4.0">
+  <meta name="generator" content="Hugo 0.49" />
+  <meta name="author" content="Edu Gonzalo Almorox">
+
+  
+  
+  
+  
+    
+  
+  <meta name="description" content="As other cities in Europe, Madrid is becoming more bike friendly. At the same time, the city council is commited with open data and has been releasing a lot of information here about several issues in the city. A service that has captured my attention is BiciMad, the public bikes that can be used within the metropolitan area.
+Data There are two main datasets associated with BiciMad.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/post/bikes-in-madrid/">
+
+  
+
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" crossorigin="anonymous">
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href=//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono>
+  
+
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+  
+  
+
+  
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Edu Gonzalo Almorox">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="Edu Gonzalo Almorox">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/post/bikes-in-madrid/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Edu Gonzalo Almorox">
+  <meta property="og:url" content="/post/bikes-in-madrid/">
+  <meta property="og:title" content="Bikes in Madrid | Edu Gonzalo Almorox">
+  <meta property="og:description" content="As other cities in Europe, Madrid is becoming more bike friendly. At the same time, the city council is commited with open data and has been releasing a lot of information here about several issues in the city. A service that has captured my attention is BiciMad, the public bikes that can be used within the metropolitan area.
+Data There are two main datasets associated with BiciMad.">
+  
+  
+    
+  <meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2018-10-31T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2018-10-31T00:00:00&#43;00:00">
+  
+
+  
+
+  
+
+  <title>Bikes in Madrid | Edu Gonzalo Almorox</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Edu Gonzalo Almorox</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#publications_selected">
+            
+            <span>Research</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/tutorial/">
+            
+            <span>Resume</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">Bikes in Madrid</h1>
+
+  
+
+  
+    
+
+<div class="article-metadata">
+
+  
+  
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Edu Gonzalo Almorox">
+  </span>
+  
+
+  <span class="article-date">
+    
+    <meta content="2018-10-31 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+    <time datetime="2018-10-31 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+      Oct 31, 2018
+    </time>
+  </span>
+  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Edu Gonzalo Almorox">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    5 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Bikes%20in%20Madrid&amp;url=%2fpost%2fbikes-in-madrid%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2fbikes-in-madrid%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fbikes-in-madrid%2f&amp;title=Bikes%20in%20Madrid"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2fbikes-in-madrid%2f&amp;title=Bikes%20in%20Madrid"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Bikes%20in%20Madrid&amp;body=%2fpost%2fbikes-in-madrid%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      <script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<link href="/rmarkdown-libs/leaflet/leaflet.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/leaflet/leaflet.js"></script>
+<link href="/rmarkdown-libs/leafletfix/leafletfix.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/Proj4Leaflet/proj4-compressed.js"></script>
+<script src="/rmarkdown-libs/Proj4Leaflet/proj4leaflet.js"></script>
+<link href="/rmarkdown-libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/leaflet-binding/leaflet.js"></script>
+<link href="/rmarkdown-libs/leaflet-markercluster/MarkerCluster.css" rel="stylesheet" />
+<link href="/rmarkdown-libs/leaflet-markercluster/MarkerCluster.Default.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/leaflet-markercluster/leaflet.markercluster.js"></script>
+<script src="/rmarkdown-libs/leaflet-markercluster/leaflet.markercluster.freezable.js"></script>
+<script src="/rmarkdown-libs/leaflet-markercluster/leaflet.markercluster.layersupport.js"></script>
+
+
+<p>As other cities in Europe, Madrid is becoming more bike friendly. At the same time, the city council is commited with open data and has been releasing a lot of information <a href="https://datos.madrid.es/portal/site/egob/">here</a> about several issues in the city. A service that has captured my attention is <a href="https://www.accessiblemadrid.com/en/blog/bicimad-public-bike-rental-service-madrid">BiciMad</a>, the public bikes that can be used within the metropolitan area.</p>
+<div id="data" class="section level2">
+<h2>Data</h2>
+<p>There are two main datasets associated with BiciMad. Information on users since 2014 and inf</p>
+<p>I begin with the information associated with bike docks corresponding from BiciMad. These data are hosted directly on the <a href="https://datos.madrid.es/portal/site/egob/">website</a> of the Madrid’s city council. I load the data with <a href="https://cran.r-project.org/web/packages/rio/README.html"><code>import</code></a>.</p>
+<div id="where-are-the-public-bikes" class="section level3">
+<h3>Where are the public bikes?</h3>
+<p>The first thing is to know where the bikes are. Madrid offers a public service. This information is obtained from the dataset corresponding to the bike stations.</p>
+<pre class="r"><code>incidencias = read.csv(&quot;https://datos.madrid.es/datosabiertos/TRAFICO/BICIMAD/2018/03/bici_incidencias20180315.csv&quot;, sep = &quot;;&quot;)
+
+places = import(&quot;https://datos.madrid.es/egobfiles/MANUAL/208327/bases_bicimad.csv&quot;) 
+
+# Modify accents and ñ 
+
+places = places %&gt;%
+  mutate(barrio = gsub(&#39;\xdc&#39;, &#39;U&#39;, Barrio), 
+         barrio  = gsub(&quot;\xd3&quot;, &quot;O&quot;, barrio),
+         barrio  = gsub(&quot;\xd1O&quot;, &quot;NO&quot;, barrio),
+         barrio  = gsub(&quot;\xda&quot;, &quot;U&quot;, barrio),
+         barrio  = gsub(&quot;\xcd&quot;, &quot;I&quot;, barrio),
+         barrio  = gsub(&quot;\xd1&quot;, &quot;N&quot;, barrio),
+         barrio = gsub(&quot;\xc9&quot;, &quot;E&quot;, barrio),
+         barrio = gsub(&quot;[[:digit:]]&quot;, &quot;&quot;, barrio),
+         barrio = gsub(&quot;- &quot;, &quot;&quot;, barrio),
+         distrito = gsub(&quot;\xcd&quot;, &quot;I&quot;, Distrito),
+         distrito = gsub(&quot;\xc1&quot;, &quot;A&quot;, distrito))
+
+# Modify name of variables
+
+
+
+# Dataset with summary bikes
+  
+  bicis_barrio = places %&gt;%
+        group_by(barrio, distrito) %&gt;%
+        summarise(bicis = sum(`N\xfamero de Plazas`)) %&gt;%
+        arrange(desc(bicis)) %&gt;%
+        ungroup() %&gt;%
+        mutate(var_mean = ifelse(bicis &gt; mean(bicis), &quot;Above average&quot;, &quot;Below average&quot;),
+               distrito = gsub(&quot;[[:digit:]]&quot;, &quot;&quot;, distrito)) 
+
+
+# Plot 
+  
+ bicis_barrio %&gt;%
+      ggplot(aes(reorder(barrio, bicis), bicis, color = distrito)) +
+      geom_segment(aes(xend = reorder(barrio, bicis)), yend = 0, color = &#39;grey50&#39;) +
+      geom_point(size = 3) +
+      coord_flip() +
+      labs(y = &quot;Bikes&quot;, x = &quot;Areas&quot;, title = &quot;Location of bikes in areas of Madrid&quot;, subtitle = &quot;&quot;, caption = &quot;source: https://datos.madrid.es/&quot;) +
+       theme_ipsum() +
+      scale_color_viridis(discrete = T, name = &quot;District&quot;, option = &quot;viridis&quot;) +
+      theme(panel.grid.major.x = element_blank(),
+            panel.grid.minor.x = element_blank(),
+            panel.grid.major.y = element_line(color = &#39;grey60&#39;, linetype = &#39;dashed&#39;),
+            axis.text.x = element_text(size = 14))</code></pre>
+<p><img src="/post/2018-10-31-bikes-in-madrid_files/figure-html/unnamed-chunk-2-1.png" width="1152" /></p>
+</div>
+<div id="where-are-they-located" class="section level3">
+<h3>Where are they located</h3>
+<p>The areas that have more areas belong to the central district (<em>Centro</em>). We can see how they are distributed spatially across the city <div id="htmlwidget-1" style="width:1152px;height:768px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[40.417016,40.4170785,40.42058,40.4303224,40.4285905,40.4283628,40.4241633,40.4252161,40.4277143,40.4156134,40.4254027,40.4270517,40.4285271,40.4273652,40.4260035,40.4261226,40.4229357,40.4231675,40.4209206,40.4219023,40.4191989,40.4191858,40.4197804,40.4198857,40.4201452,40.4202137,40.417906,40.4173416,40.4172593,40.4238321,40.4132828,40.4181752,40.416244,40.4193355,40.4163446,40.4148511,40.415496,40.4144117,40.4141792,40.416885,40.4108606,40.4112961,40.4112662,40.4137865,40.4122423,40.410744,40.4100889,40.4098162,40.4069547,40.4055087,40.4046233,40.4054473,40.4060497,40.4083102,40.4077234,40.4145181,40.4082802,40.4266233,40.4240716,40.418484,40.4296363,40.4222585,40.4254802,40.4194508,40.4214379,40.4212152,40.4178874,40.4166952,40.410829,40.412781,40.4100609,40.4151635,40.4160054,40.4159135,40.411463,40.4117601,40.4083387,40.4072851,40.4063347,40.4005704,40.4050482,40.4074558,40.4076554,40.4095758,40.4084793,40.4132589,40.4033695,40.4211415,40.4185779,40.4276717,40.4312077,40.4272628,40.4250878,40.4261113,40.4262237,40.4256984,40.4233686,40.4226634,40.4220516,40.4224846,40.4241911,40.4261048,40.4247843,40.4231223,40.4211552,40.4303733,40.4267658,40.4270684,40.4249335,40.4215952,40.4274425,40.4301281,40.4347654,40.4335742,40.433982,40.4326267,40.4277472,40.4278199,40.4253802,40.4241079,40.4241996,40.4309046,40.4007979,40.4014567,40.4030247,40.4018356,40.429524,40.4306386,40.4308173,40.4353145,40.4345672,40.433908,40.4390413,40.4384622,40.4417512,40.4417479,40.4463889,40.4471673,40.4440317,40.441484,40.4452833,40.4454958,40.4456884,40.4393558,40.4386081,40.4354253,40.4335262,40.434616,40.4323192,40.4297717,40.4442372,40.4483353,40.4510228,40.449845,40.4491555,40.4488617,40.4527163,40.4523394,40.454776,40.4572961,40.4592406,40.459282,40.45862,40.4542549,40.4571887,40.4221254,40.4035176,40.4036349,40.3971621,40.3929735,40.4139487,40.4137262],[-3.7025753,-3.7024621,-3.7056739,-3.7072122,-3.7026739,-3.7020762,-3.6984093,-3.6977399,-3.6953067,-3.7094093,-3.6920816,-3.7036192,-3.7062202,-3.7104727,-3.7134644,-3.707242,-3.7074931,-3.7041859,-3.6995679,-3.6953948,-3.6952095,-3.6952901,-3.7015608,-3.7014962,-3.7064995,-3.7082901,-3.7105866,-3.7059978,-3.7060243,-3.6945535,-3.6955929,-3.6988356,-3.6958008,-3.7115428,-3.706625,-3.7061355,-3.7032626,-3.7035044,-3.7103676,-3.7116215,-3.7141234,-3.7114443,-3.7090043,-3.7047463,-3.6990517,-3.6982068,-3.7025446,-3.7039138,-3.7111363,-3.7071322,-3.702755,-3.7020997,-3.6992427,-3.69322,-3.6935934,-3.7007838,-3.7007295,-3.7003435,-3.7019295,-3.7032875,-3.7128181,-3.6979411,-3.7041167,-3.6881994,-3.675206,-3.6706664,-3.6706803,-3.6893825,-3.6931349,-3.6911649,-3.6888669,-3.6777776,-3.674021,-3.6692614,-3.669099,-3.6765768,-3.6784149,-3.6751544,-3.6707742,-3.6745783,-3.6805524,-3.6904197,-3.6906904,-3.6919663,-3.669683,-3.6745339,-3.6726923,-3.6799299,-3.6933298,-3.6835631,-3.6837471,-3.6751716,-3.6837297,-3.6788203,-3.6864821,-3.6894124,-3.6907044,-3.6869914,-3.6820471,-3.6801515,-3.6754079,-3.6739638,-3.6738777,-3.6694246,-3.6840806,-3.6865351,-3.6895792,-3.6874745,-3.687876,-3.6884243,-3.670653,-3.6815253,-3.7201316,-3.7174896,-3.7177783,-3.7248727,-3.7207145,-3.7174108,-3.7169626,-3.7118199,-3.7118905,-3.7189152,-3.6881393,-3.6865777,-3.6946097,-3.6986046,-3.6962626,-3.7134685,-3.6993182,-3.6948375,-3.7017424,-3.7083987,-3.7155889,-3.6982986,-3.7017555,-3.7040233,-3.7035911,-3.7000292,-3.6955092,-3.6928896,-3.6908127,-3.6852925,-3.6915818,-3.6904495,-3.6829088,-3.6892902,-3.6880402,-3.6782355,-3.6754628,-3.671401,-3.6787983,-3.6795811,-3.6817012,-3.6878481,-3.6905376,-3.6952117,-3.6989497,-3.6930944,-3.6946897,-3.7008905,-3.6913229,-3.6893305,-3.6847049,-3.6837348,-3.6765407,-3.722035,-3.7107559,-3.7064372,-3.6944786,-3.6977928,-3.7133497,-3.7175955],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["24","24","27","18","27","27","24","21","24","24","24","27","24","27","27","21","21","27","24","24","24","6","24","24","24","24","24","24","24","24","27","24","29","27","27","24","24","24","24","24","24","24","27","24","21","24","24","21","21","24","24","24","24","24","27","24","24","21","24","27","27","27","21","27","24","27","24","24","67","21","27","27","24","24","24","27","27","24","24","24","24","24","24","24","24","24","27","27","21","24","24","24","24","24","24","24","24","24","27","24","24","24","24","24","24","24","21","24","36","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","18","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24","24"],null,{"showCoverageOnHover":true,"zoomToBoundsOnClick":true,"spiderfyOnMaxZoom":true,"removeOutsideVisibleBounds":true,"spiderLegPolylineOptions":{"weight":1.5,"color":"#222","opacity":0.5},"freezeAtZoom":false},null,["PUERTA DEL SOL, PLAZA, DE LA","ALCALA, CALLE, DE","MIGUEL MOYA, CALLE, DE","CONDE DEL VALLE DE SUCHIL, PLAZA, DEL","MANUELA MALASA<d1>A, CALLE, DE","FUENCARRAL, CALLE, DE","HORTALEZA, CALLE, DE","HORTALEZA, CALLE, DE","ALONSO MARTINEZ, PLAZA, DE","SAN MIGUEL, PLAZA, DE","MARQUES DE LA ENSENADA, CALLE, DEL","SAN ANDRES, CALLE, DE","SAN BERNARDO, CALLE, DE","CONDE DUQUE, CALLE, DEL","VENTURA RODRIGUEZ, CALLE, DE","SAN VICENTE FERRER, CALLE, DE","SAN BERNARDO, CALLE, DE","CARLOS CAMBRONERO, PLAZA, DE","PEDRO ZEROLO, PLAZA, DE","PRIM, CALLE, DE","ALCALA, CALLE, DE","ALCALA, CALLE, DE","RED DE SAN LUIS, PLAZA, DE LA","RED DE SAN LUIS, PLAZA, DE LA","JACOMETREZO, CALLE, DE","SANTO DOMINGO, CUESTA, DE","CARLOS III, CALLE, DE","CELENQUE, PLAZA, DEL","CELENQUE, PLAZA, DEL","SALESAS, PLAZA, DE LAS","JESUS, CALLE, DE","ALCALA, CALLE, DE","MARQUES DE CUBAS, CALLE, DEL","PAVIA, CALLE, DE","MAYOR, CALLE","PROVINCIA, PLAZA, DE LA","CARRETAS, CALLE, DE LAS","JACINTO BENAVENTE, PLAZA, DE","CORDON, CALLE, DEL","RAMALES, PLAZA, DE","VISTILLAS, TRAVESIA, DE LAS","SAN FRANCISCO, CARRERA, DE","CEBADA, PLAZA, DE LA","CONDE DE ROMANONES, CALLE, DEL","ATOCHA, CALLE, DE","SANTA ISABEL, CALLE, DE","LAVAPIES, CALLE, DE","MESON DE PAREDES, CALLE, DEL","PUERTA DE TOLEDO, GLORIETA, DE LA","RIBERA DE CURTIDORES, CALLE, DE LA","EMBAJADORES, GLORIETA, DE","MIGUEL SERVET, CALLE, DE","ATOCHA, RONDA, DE","SANTA ISABEL, CALLE, DE","EMPERADOR CARLOS V, PLAZA, DEL","SANTA ANA, PLAZA, DE","VALENCIA, CALLE, DE","BARCELO, CALLE, DE","SAN ILDEFONSO, PLAZA, DE","CARMEN, PLAZA, DEL","SANTA CRUZ DE MARCENADO, CALLE, DE","AUGUSTO FIGUEROA, CALLE, DE","ESPIRITU SANTO, CALLE, DEL","ALFONSO XII, CALLE, DE","O'DONNELL, CALLE, DE","O'DONNELL, CALLE, DE","IBIZA, CALLE, DE","ANTONIO MAURA, CALLE, DE","ALMADEN, CALLE, DE","ESPALTER, CALLE, DE","ALFONSO XII, CALLE, DE","MENENDEZ PELAYO, AVENIDA, DE","DOCE DE OCTUBRE, CALLE, DEL","DOCTOR ESQUERDO, CALLE, DEL","ASTROS, PLAZA, DE LOS","MENENDEZ PELAYO, AVENIDA, DE","MENENDEZ PELAYO, AVENIDA, DE","JUAN DE URBIETA, CALLE, DE","CONDE DE CASAL, PLAZA, DEL","CERRO DE LA PLATA, CALLE, DEL","MENENDEZ PELAYO, AVENIDA, DE","CIUDAD DE BARCELONA, AVENIDA, DE LA","CIUDAD DE BARCELONA, AVENIDA, DE LA","PRADO, PASEO, DEL","LIRA, CALLE, DE LA","PIO BAROJA, CALLE, DE","DOCTOR ESQUERDO, CALLE, DEL","MENENDEZ PELAYO, AVENIDA, DE","PRADO, PASEO, DEL","AYALA, CALLE, DE","VELAZQUEZ, CALLE, DE","AYALA, CALLE, DE","GOYA, CALLE, DE","HERMOSILLA, CALLE, DE","CLAUDIO COELLO, CALLE, DE","GOYA, CALLE, DE","RECOLETOS, PASEO, DE","CLAUDIO COELLO, CALLE, DE","ALCALA, CALLE, DE","MENENDEZ PELAYO, AVENIDA, DE","FELIPE II, AVENIDA, DE","ALCANTARA, CALLE, DE","GOYA, CALLE, DE","JORGE JUAN, CALLE, DE","ALCALA, CALLE, DE","JOSE ORTEGA Y GASSET, CALLE, DE","CASTELLANA, PASEO, DE LA","SERRANO, CALLE, DE","SERRANO, CALLE, DE","SERRANO, CALLE, DE","MARTIRES CONCEPCIONISTAS, CALLE, DE LOS","JOSE ORTEGA Y GASSET, CALLE, DE","MORET, PASEO, DE","ARCIPRESTE DE HITA, CALLE, DEL","ARCIPRESTE DE HITA, CALLE, DEL","MORET, PASEO, DE","PINTOR ROSALES, PASEO, DEL","QUINTANA, CALLE, DE","MARQUES DE CERRALBO, PLAZA, DEL","ESPA<d1>A, PLAZA, DE","ESPA<d1>A, PLAZA, DE","ALTAMIRANO, CALLE, DE","JUAN MARTIN EL EMPECINADO, CALLE, DE","MENDEZ ALVARO, CALLE, DE","PALOS DE LA FRONTERA, CALLE, DE","SANTA MARIA DE LA CABEZA, PASEO, DE","SANTA ENGRACIA, CALLE, DE","GUZMAN EL BUENO, CALLE, DE","MANUEL SILVELA, CALLE, DE","FERNANDEZ DE LA HOZ, CALLE, DE","GENERAL ALVAREZ DE CASTRO, CALLE, DEL","FERNANDO EL CATOLICO, CALLE, DE","CEA BERMUDEZ, CALLE, DE","JOSE ABASCAL, CALLE, DE","SANTA ENGRACIA, CALLE, DE","BRAVO MURILLO, CALLE, DE","SANTA ENGRACIA, CALLE, DE","DULCINEA, CALLE, DE","MARIA DE GUZMAN, CALLE, DE","SAN JUAN DE LA CRUZ, PLAZA, DE","CASTELLANA, PASEO, DE LA","REPUBLICA ARGENTINA, PLAZA, DE LA","CASTELLANA, PASEO, DE LA","JOSE GUTIERREZ ABASCAL, CALLE, DE","VELAZQUEZ, CALLE, DE","CASTELLANA, PASEO, DE LA","CASTELLANA, PASEO, DE LA","DIEGO DE LEON, CALLE, DE","JUAN BRAVO, CALLE, DE","JOSE ORTEGA Y GASSET, CALLE, DE","MARIA FRANCISCA, CALLE, DE","DOCTOR ARCE, AVENIDA, DEL","SERRANO, CALLE, DE","LA HABANA, PASEO, DE","CASTELLANA, PASEO, DE LA","ORENSE, CALLE, DE","GENERAL PERON, AVENIDA, DEL","GENERAL PERON, AVENIDA, DEL","ORENSE, CALLE, DE","SAN GERM<c1>N, CALLE, DE","SOR ANGELA DE LA CRUZ, CALLE, DE","CASTELLANA, PASEO, DE LA","ALBERTO ALCOCER, AVENIDA, DE","LA HABANA, PASEO, DE","COLOMBIA, CALLE, DE","FLORIDA, PASEO, DE LA","OLMOS, PASEO, DE LOS","ESPERANZA, PASEO, DE LA","DELICIAS, PASEO, DE LAS","CHOPERA, PASEO, DE LA","SEGOVIA, CALLE, DE","SEGOVIA, CALLE, DE"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[40.3929735,40.459282],"lng":[-3.7248727,-3.669099]}},"evals":[],"jsHooks":[]}</script></p>
+</div>
+</div>
+
+    </div>
+
+    
+
+
+
+
+
+    
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+<div class="container">
+  <footer class="site-footer">
+  
+  <p class="powered-by">
+    <a href="/privacy/">Privacy Policy</a>
+  </p>
+  
+
+  <p class="powered-by">
+    &copy; Edu Gonzalo Almorox  - 2018 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+</div>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "Search Results",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    <script src="/js/search.js"></script>
+    
+
+    
+    
+
+  </body>
+</html>
+
